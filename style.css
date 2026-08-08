@@ -1,0 +1,1756 @@
+/* ===================================
+   Investment Landing Page V4
+   Ultra Premium Theme
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+    -45deg,
+    #08131f,
+    #0d2538,
+    #14532d,
+    #0b3d2e
+    );
+
+    background-size:400% 400%;
+
+    animation:gradientBG 15s ease infinite;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+}
+
+/* Animated Background */
+
+@keyframes gradientBG{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.background-animation{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:-10;
+
+overflow:hidden;
+
+}
+
+.background-animation span{
+
+position:absolute;
+
+display:block;
+
+width:25px;
+height:25px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+
+animation:float 18s linear infinite;
+
+}
+
+.background-animation span:nth-child(1){
+
+left:10%;
+top:20%;
+
+width:60px;
+height:60px;
+
+animation-duration:18s;
+
+}
+
+.background-animation span:nth-child(2){
+
+left:80%;
+top:15%;
+
+width:80px;
+height:80px;
+
+animation-duration:25s;
+
+}
+
+.background-animation span:nth-child(3){
+
+left:30%;
+top:70%;
+
+width:45px;
+height:45px;
+
+animation-duration:20s;
+
+}
+
+.background-animation span:nth-child(4){
+
+left:65%;
+top:75%;
+
+width:70px;
+height:70px;
+
+animation-duration:28s;
+
+}
+
+.background-animation span:nth-child(5){
+
+left:50%;
+top:45%;
+
+width:90px;
+height:90px;
+
+animation-duration:30s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Navbar */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 0;
+
+backdrop-filter:blur(14px);
+
+background:rgba(0,0,0,.15);
+
+z-index:999;
+
+}
+
+.navbar{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#22c55e;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:25px;
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+color:#fff;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+color:#22c55e;
+
+}
+
+/* Hero */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:120px 20px 60px;
+
+text-align:center;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.offer-badge{
+
+display:inline-block;
+
+padding:10px 18px;
+
+border-radius:50px;
+
+background:#22c55e;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+line-height:1.2;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.8;
+
+opacity:.95;
+
+margin-bottom:35px;
+
+}
+
+/* part2b */
+/* ===================================
+   BUTTONS
+=================================== */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.btn-primary,
+.btn-secondary,
+.cta-button,
+.newsletter-button{
+
+    display:inline-block;
+
+    padding:18px 36px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.4s ease;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(45deg,#22c55e,#16a34a);
+
+    color:#fff;
+
+    box-shadow:0 0 25px rgba(34,197,94,.45);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 0 40px rgba(34,197,94,.8);
+
+}
+
+.btn-secondary{
+
+    border:2px solid rgba(255,255,255,.25);
+
+    color:#fff;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.btn-secondary:hover{
+
+    background:#fff;
+
+    color:#111;
+
+}
+
+/* ===================================
+   REDIRECT BOX
+=================================== */
+
+.redirect-box{
+
+    margin-top:35px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.08);
+
+    font-size:18px;
+
+}
+
+#redirect-count{
+
+    color:#22c55e;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+/* ===================================
+   COUNTDOWN
+=================================== */
+
+.countdown-section{
+
+    text-align:center;
+
+    padding:90px 20px;
+
+}
+
+.countdown-section h2{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.countdown{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.time-box{
+
+    width:140px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+.time-box:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.time-box h3{
+
+    font-size:42px;
+
+    color:#22c55e;
+
+}
+
+.time-box span{
+
+    opacity:.85;
+
+}
+
+/* ===================================
+   PLAN CARDS
+=================================== */
+
+.plans-section{
+
+    padding:100px 20px;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-size:46px;
+
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    opacity:.85;
+
+    line-height:1.8;
+
+}
+
+.plans-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+.plan-card{
+
+    position:relative;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+    overflow:hidden;
+
+}
+
+.plan-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+.plan-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.12),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.plan-card:hover::before{
+
+    left:100%;
+
+}
+
+.plan-icon{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.plan-card h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.price{
+
+    color:#22c55e;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.plan-card ul{
+
+    list-style:none;
+
+}
+
+.plan-card ul li{
+
+    padding:10px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.popular{
+
+    border:2px solid #22c55e;
+
+}
+
+.popular-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+/* Part 2c */
+
+/* ===================================
+   BENEFITS SECTION
+=================================== */
+
+.benefits-section{
+    padding:100px 20px;
+}
+
+.benefits-grid{
+    max-width:1200px;
+    margin:60px auto 0;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.benefit-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.45s;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.benefit-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+}
+
+.benefit-icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.benefit-card h3{
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.benefit-card p{
+
+    opacity:.88;
+
+    line-height:1.7;
+
+}
+
+/* ===================================
+   STATS
+=================================== */
+
+.stats-section{
+
+    padding:90px 20px;
+
+}
+
+.stats-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.stat-box{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    padding:35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.stat-box:hover{
+
+    transform:scale(1.05);
+
+}
+
+.stat-box h2{
+
+    font-size:48px;
+
+    color:#22c55e;
+
+    margin-bottom:10px;
+
+}
+
+.stat-box p{
+
+    opacity:.85;
+
+}
+
+/* ===================================
+   TESTIMONIALS
+=================================== */
+
+.testimonials{
+
+    padding:100px 20px;
+
+}
+
+.testimonial-grid{
+
+    max-width:1200px;
+
+    margin:60px auto 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.testimonial-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    transition:.4s;
+
+    position:relative;
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.stars{
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+}
+
+.testimonial-card p{
+
+    line-height:1.8;
+
+    opacity:.9;
+
+    margin-bottom:18px;
+
+}
+
+.testimonial-card h4{
+
+    color:#22c55e;
+
+}
+
+/* ===================================
+   TRUST SECTION
+=================================== */
+
+.trust-section{
+
+    padding:100px 20px;
+
+}
+
+.trust-grid{
+
+    max-width:1200px;
+
+    margin:50px auto 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.trust-card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.trust-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.28);
+
+}
+
+.trust-card h3{
+
+    margin-bottom:15px;
+
+    color:#22c55e;
+
+}
+
+.trust-card p{
+
+    opacity:.88;
+
+}
+
+/* ===================================
+   NEWSLETTER CTA
+=================================== */
+
+.newsletter-section{
+
+    padding:100px 20px;
+
+}
+
+.newsletter-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:55px;
+
+}
+
+.newsletter-card h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.newsletter-card p{
+
+    opacity:.9;
+
+    margin-bottom:35px;
+
+    line-height:1.8;
+
+}
+
+/* part 2d */
+
+/* ===================================
+   FAQ SECTION
+=================================== */
+
+.faq-section{
+    padding:100px 20px;
+}
+
+.section-heading{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:18px;
+
+    margin-bottom:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.faq-question{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px;
+
+}
+
+.faq-question span{
+
+    font-size:28px;
+
+    color:#22c55e;
+
+}
+
+.faq-answer{
+
+    display:none;
+
+    padding:0 22px 22px;
+
+    color:#ddd;
+
+    line-height:1.8;
+
+}
+
+/* ===================================
+   FINAL CTA
+=================================== */
+
+.final-cta{
+
+    padding:110px 20px;
+
+}
+
+.cta-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#22c55e,#15803d);
+
+    border-radius:28px;
+
+    padding:60px 40px;
+
+    box-shadow:0 20px 60px rgba(34,197,94,.35);
+
+}
+
+.cta-box h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.cta-box p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* ===================================
+   FLOATING TELEGRAM BUTTON
+=================================== */
+
+.floating-icons{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:95px;
+
+    z-index:999;
+
+}
+
+.floating-telegram{
+
+    width:65px;
+
+    height:65px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    font-size:30px;
+
+    color:#fff;
+
+    background:#229ED9;
+
+    box-shadow:0 0 25px rgba(34,158,217,.45);
+
+    animation:telegramPulse 2s infinite;
+
+}
+
+@keyframes telegramPulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===================================
+   LIVE NOTIFICATION
+=================================== */
+
+.live-notification{
+
+    position:fixed;
+
+    left:20px;
+
+    bottom:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px 20px;
+
+    border-radius:14px;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(12px);
+
+    z-index:999;
+
+    animation:slideIn 1s;
+
+}
+
+.live-dot{
+
+    width:12px;
+
+    height:12px;
+
+    background:#22c55e;
+
+    border-radius:50%;
+
+    animation:blink 1s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.3;
+
+}
+
+}
+
+@keyframes slideIn{
+
+from{
+
+transform:translateX(-120%);
+
+}
+
+to{
+
+transform:translateX(0);
+
+}
+
+}
+
+/* ===================================
+   SCROLL TO TOP
+=================================== */
+
+.scroll-top{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:20px;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    box-shadow:0 10px 30px rgba(34,197,94,.45);
+
+    transition:.35s;
+
+}
+
+.scroll-top:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ===================================
+   LOADER
+=================================== */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:#08131f;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-circle{
+
+    width:80px;
+
+    height:80px;
+
+    border:6px solid rgba(255,255,255,.15);
+
+    border-top:6px solid #22c55e;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+.footer-content h3{
+
+    color:#22c55e;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    margin:10px 0;
+
+    opacity:.85;
+
+}
+
+.footer-note{
+
+    margin-top:25px;
+
+    font-size:14px;
+
+    opacity:.65;
+
+}
+
+/* part 2E */
+
+/* ===================================
+   FLOATING SHAPES
+=================================== */
+
+.floating-shapes{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.shape{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    animation:floatShape 20s linear infinite;
+}
+
+.shape1{
+    width:180px;
+    height:180px;
+    left:5%;
+    top:80%;
+}
+
+.shape2{
+    width:250px;
+    height:250px;
+    right:10%;
+    top:15%;
+    animation-duration:28s;
+}
+
+.shape3{
+    width:120px;
+    height:120px;
+    left:45%;
+    top:60%;
+    animation-duration:18s;
+}
+
+.shape4{
+    width:90px;
+    height:90px;
+    right:30%;
+    bottom:5%;
+    animation-duration:22s;
+}
+
+.shape5{
+    width:160px;
+    height:160px;
+    left:75%;
+    top:75%;
+    animation-duration:30s;
+}
+
+@keyframes floatShape{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+}
+
+}
+
+/* ==========================
+   GLASS EFFECT
+========================== */
+
+.plan-card,
+.benefit-card,
+.stat-box,
+.testimonial-card,
+.trust-card,
+.newsletter-card,
+.time-box,
+.faq-item{
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 10px 35px rgba(0,0,0,.20);
+
+}
+
+/* ==========================
+   SECTION SPACING
+========================== */
+
+section{
+
+position:relative;
+
+z-index:2;
+
+}
+
+h1,h2,h3,h4{
+
+font-weight:700;
+
+}
+
+p{
+
+line-height:1.8;
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#07131f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#22c55e;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#16a34a;
+
+}
+
+/* ==========================
+   SELECTION
+========================== */
+
+::selection{
+
+background:#22c55e;
+
+color:#fff;
+
+}
+
+/* ==========================
+   IMAGE SUPPORT
+========================== */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+/* ==========================
+   FADE ANIMATION
+========================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media(max-width:991px){
+
+.nav-links{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+.cta-box h2{
+
+font-size:34px;
+
+}
+
+.hero-content{
+
+padding:35px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.btn-primary,
+.btn-secondary,
+.cta-button,
+.newsletter-button{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.plan-card,
+.benefit-card,
+.stat-box,
+.testimonial-card{
+
+padding:28px;
+
+}
+
+.countdown{
+
+gap:15px;
+
+}
+
+.time-box{
+
+width:110px;
+
+padding:20px;
+
+}
+
+.time-box h3{
+
+font-size:34px;
+
+}
+
+.live-notification{
+
+left:10px;
+
+right:10px;
+
+bottom:10px;
+
+font-size:14px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.logo{
+
+font-size:22px;
+
+}
+
+.section-title h2{
+
+font-size:28px;
+
+}
+
+.countdown{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.time-box{
+
+width:90%;
+
+max-width:220px;
+
+}
+
+.scroll-top{
+
+width:50px;
+
+height:50px;
+
+}
+
+.floating-telegram{
+
+width:55px;
+
+height:55px;
+
+font-size:24px;
+
+}
+
+}
+
+/* ==========================
+   END OF STYLE.CSS
+========================== */
