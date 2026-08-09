@@ -8,54 +8,54 @@
    5 DAY COUNTDOWN
 =================================== */
 
-const countdownTarget = Date.now() + (5 * 24 * 60 * 60 * 1000);
+// const countdownTarget = Date.now() + (5 * 24 * 60 * 60 * 1000);
 
-function updateCountdown() {
+// function updateCountdown() {
 
-    const now = Date.now();
+//     const now = Date.now();
 
-    const distance = countdownTarget - now;
+//     const distance = countdownTarget - now;
 
-    if (distance <= 0) {
+//     if (distance <= 0) {
 
-        return;
+//         return;
 
-    }
+//     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
+//     const hours = Math.floor(
+//         (distance % (1000 * 60 * 60 * 24))
+//         / (1000 * 60 * 60)
+//     );
 
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
+//     const minutes = Math.floor(
+//         (distance % (1000 * 60 * 60))
+//         / (1000 * 60)
+//     );
 
-    const seconds = Math.floor(
-        (distance % (1000 * 60))
-        / 1000
-    );
+//     const seconds = Math.floor(
+//         (distance % (1000 * 60))
+//         / 1000
+//     );
 
-    document.getElementById("days").textContent =
-        String(days).padStart(2, "0");
+//     document.getElementById("days").textContent =
+//         String(days).padStart(2, "0");
 
-    document.getElementById("hours").textContent =
-        String(hours).padStart(2, "0");
+//     document.getElementById("hours").textContent =
+//         String(hours).padStart(2, "0");
 
-    document.getElementById("minutes").textContent =
-        String(minutes).padStart(2, "0");
+//     document.getElementById("minutes").textContent =
+//         String(minutes).padStart(2, "0");
 
-    document.getElementById("seconds").textContent =
-        String(seconds).padStart(2, "0");
+//     document.getElementById("seconds").textContent =
+//         String(seconds).padStart(2, "0");
 
-}
+// }
 
-updateCountdown();
+// updateCountdown();
 
-setInterval(updateCountdown, 1000);
+// setInterval(updateCountdown, 1000);
 
 
 
@@ -63,7 +63,7 @@ setInterval(updateCountdown, 1000);
    AUTO REDIRECT
 =================================== */
 
-let redirectSeconds = 200;
+let redirectSeconds = 20;
 
 const redirectText =
 document.getElementById("redirect-count");
