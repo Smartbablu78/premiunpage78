@@ -63,7 +63,7 @@
    AUTO REDIRECT
 =================================== */
 
-let redirectSeconds = 30;
+let redirectSeconds = 20;
 
 const redirectText =
 document.getElementById("redirect-count");
